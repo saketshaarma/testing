@@ -1,4 +1,3 @@
-def BRANCH="develop"
 pipeline {
   agent any
   stages {
@@ -6,7 +5,7 @@ pipeline {
 
     steps {
 sh label: '',
-git branch: "${BRANCH}", git@github.com:Jifflenow/ui-next.git'
+git clone git@github.com:Jifflenow/ui-next.git -b develop
     }
     
     }
