@@ -4,8 +4,9 @@ pipeline {
     stage ("SCM CHECKOUT") {
 
     steps {
-sh label: '',
-git clone git@github.com:Jifflenow/ui-next.git -b develop
+        git branch: 'develop',
+        url: 'ssh://git@github.com:Jifflenow/ui-next.git'
+        sh "ls -lat"
     }
     
     }
